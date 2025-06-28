@@ -6,13 +6,6 @@
     <title>المحاكي المتكامل لنظام الطاقة الشمسية 2025 | م/مطيع داؤود المحجري</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
         :root {
             --primary: #0a3d62;
             --secondary: #1e5799;
@@ -28,7 +21,14 @@
             --gel: #4682b4;
             --agm: #6a5acd;
         }
-        
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
             background: linear-gradient(135deg, var(--primary), var(--secondary), #3a86ff);
             color: #333;
@@ -37,12 +37,12 @@
             padding: 20px;
             background-attachment: fixed;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         header {
             text-align: center;
             padding: 30px 0;
@@ -55,7 +55,7 @@
             background: rgba(0, 0, 0, 0.4);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
-        
+
         header::before {
             content: "";
             position: absolute;
@@ -67,7 +67,7 @@
             opacity: 0.3;
             z-index: -1;
         }
-        
+
         .logo {
             display: flex;
             align-items: center;
@@ -75,20 +75,20 @@
             margin-bottom: 15px;
             flex-wrap: wrap;
         }
-        
+
         .logo i {
             font-size: 3rem;
             margin-left: 15px;
             color: var(--accent);
             text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
         }
-        
+
         header h1 {
             font-size: 2.2rem;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-        
+
         .year-badge {
             background: var(--accent);
             color: var(--primary);
@@ -100,7 +100,7 @@
             font-size: 1.2rem;
             box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
-        
+
         .developer {
             background: rgba(255, 255, 255, 0.2);
             display: inline-block;
@@ -112,7 +112,7 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
             font-size: 1.1rem;
         }
-        
+
         .tabs {
             display: flex;
             justify-content: center;
@@ -120,7 +120,7 @@
             flex-wrap: wrap;
             gap: 8px;
         }
-        
+
         .tab {
             background: rgba(255, 255, 255, 0.2);
             padding: 12px 25px;
@@ -134,22 +134,22 @@
             text-align: center;
             min-width: 150px;
         }
-        
+
         .tab:hover, .tab.active {
             background: var(--accent);
             color: var(--primary);
             transform: translateY(-3px);
         }
-        
+
         .tab-content {
             display: none;
         }
-        
+
         .tab-content.active {
             display: block;
             animation: fadeIn 0.5s ease;
         }
-        
+
         .main-content {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
@@ -157,7 +157,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             margin-bottom: 30px;
         }
-        
+
         .section-title {
             display: flex;
             align-items: center;
@@ -167,20 +167,20 @@
             color: var(--primary);
             font-size: 1.4rem;
         }
-        
+
         .section-title i {
             margin-left: 10px;
             font-size: 1.6rem;
             color: var(--primary);
         }
-        
+
         .form-group {
             margin-bottom: 20px;
             padding: 15px;
             background: #f8f9fa;
             border-radius: 10px;
         }
-        
+
         label {
             display: block;
             margin-bottom: 8px;
@@ -188,7 +188,7 @@
             color: var(--primary);
             font-size: 1.05rem;
         }
-        
+
         input, select {
             width: 100%;
             padding: 12px 15px;
@@ -198,13 +198,13 @@
             transition: all 0.3s;
             background: white;
         }
-        
+
         input:focus, select:focus {
             border-color: var(--secondary);
             outline: none;
             box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
         }
-        
+
         .btn {
             background: linear-gradient(to right, var(--primary), var(--secondary));
             color: white;
@@ -220,30 +220,30 @@
             margin-top: 10px;
             box-shadow: 0 4px 10px rgba(10, 61, 98, 0.3);
         }
-        
+
         .btn:hover {
             background: linear-gradient(to right, #093354, #1a4b85);
             transform: translateY(-3px);
             box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3);
         }
-        
+
         .btn:active {
             transform: translateY(0);
         }
-        
+
         .btn-sm {
             padding: 8px 15px;
             font-size: 0.9rem;
             width: auto;
         }
-        
+
         .results-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin-top: 30px;
         }
-        
+
         .result-card {
             background: white;
             border-radius: 10px;
@@ -254,25 +254,25 @@
             transition: transform 0.3s ease;
             background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
         }
-        
+
         .result-card:hover {
             transform: scale(1.05);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
-        
+
         .result-value {
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary);
             margin: 10px 0;
         }
-        
+
         .result-label {
             font-size: 1rem;
             color: #495057;
             font-weight: 500;
         }
-        
+
         footer {
             text-align: center;
             color: white;
@@ -282,67 +282,27 @@
             background: rgba(0, 0, 0, 0.3);
             border-radius: 15px;
         }
-        
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
-        .sun-animation {
-            text-align: center;
-            margin: 20px 0;
-        }
-        
-        .sun {
-            width: 90px;
-            height: 90px;
-            background: radial-gradient(circle, var(--accent), #ff9800);
-            border-radius: 50%;
-            margin: 0 auto;
-            position: relative;
-            box-shadow: 0 0 40px #ff9800;
-            animation: rotate 20s linear infinite;
-        }
-        
-        .sun:before {
-            content: "";
-            position: absolute;
-            top: -15px;
-            left: -15px;
-            right: -15px;
-            bottom: -15px;
-            background: radial-gradient(circle, transparent 50%, rgba(255, 152, 0, 0.3) 100%);
-            border-radius: 50%;
-            z-index: -1;
-            animation: pulse 3s infinite;
-        }
-        
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(0.95); opacity: 0.7; }
-            50% { transform: scale(1.05); opacity: 1; }
-            100% { transform: scale(0.95); opacity: 0.7; }
-        }
-        
+
         .yemen-flag {
             display: flex;
             justify-content: center;
             margin: 20px 0;
         }
-        
+
         .flag-strip {
             height: 25px;
             width: 200px;
         }
-        
+
         .red { background-color: #ce1126; }
         .white { background-color: #ffffff; }
         .black { background-color: #000000; }
-        
+
         .contact-info {
             text-align: center;
             margin: 20px 0;
@@ -351,111 +311,32 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .contact-info h3 {
             color: var(--primary);
             margin-bottom: 15px;
             font-size: 1.3rem;
         }
-        
+
         .contact-info p {
             margin: 10px 0;
             font-size: 1.05rem;
             direction: ltr;
         }
-        
+
         .contact-info i {
             margin-left: 10px;
             color: var(--secondary);
             min-width: 25px;
         }
-        
+
         .contact-row {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
         }
-        
-        .consumption-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .consumption-card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-top: 4px solid var(--secondary);
-        }
-        
-        .consumption-value {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin: 10px 0;
-        }
-        
-        .consumption-label {
-            font-size: 1rem;
-            color: #495057;
-            font-weight: 500;
-        }
-        
-        .cost-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .cost-card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-top: 4px solid var(--success);
-        }
-        
-        .cost-value {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--success);
-            margin: 10px 0;
-        }
-        
-        .cost-label {
-            font-size: 1rem;
-            color: #495057;
-            font-weight: 500;
-        }
-        
-        .legal-section {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 20px;
-            margin-top: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border-left: 4px solid var(--primary);
-        }
-        
-        .legal-section h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .legal-section h3 i {
-            margin-left: 10px;
-            color: var(--secondary);
-        }
-        
+
         .appliance-table {
             width: 100%;
             border-collapse: collapse;
@@ -465,227 +346,28 @@
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         .appliance-table th {
             background-color: var(--primary);
             color: white;
             padding: 15px;
             text-align: center;
         }
-        
+
         .appliance-table td {
             padding: 12px;
             border-bottom: 1px solid #eee;
             text-align: center;
         }
-        
+
         .appliance-table tr:nth-child(even) {
             background-color: #f9f9f9;
         }
-        
+
         .appliance-table tr:hover {
             background-color: #f1f7ff;
         }
-        
-        .solar-system-check {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        
-        .solar-system-check label {
-            margin-right: 10px;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-        
-        .solar-system-check input {
-            width: auto;
-            margin-left: 10px;
-            transform: scale(1.5);
-        }
-        
-        .formula-box {
-            background: #e3f2fd;
-            border-radius: 10px;
-            padding: 15px;
-            margin: 20px 0;
-            border-left: 4px solid var(--info);
-            font-family: monospace;
-        }
-        
-        .battery-type {
-            padding: 3px 10px;
-            border-radius: 5px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: white;
-        }
-        
-        .battery-lead { background-color: var(--copper); }
-        .battery-lithium { background-color: var(--lithium); }
-        .battery-gel { background-color: var(--gel); }
-        .battery-agm { background-color: var(--agm); }
-        
-        .system-summary {
-            background: linear-gradient(135deg, #1e5799, #3a86ff);
-            color: white;
-            border-radius: 15px;
-            padding: 25px;
-            margin-top: 30px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        }
-        
-        .summary-title {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 1.6rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .summary-title i {
-            margin-left: 10px;
-        }
-        
-        .summary-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .summary-card {
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .summary-value {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 10px 0;
-        }
-        
-        .summary-label {
-            font-size: 1rem;
-            font-weight: 500;
-            opacity: 0.9;
-        }
-        
-        .memory-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 20px 0;
-            flex-wrap: wrap;
-        }
-        
-        .memory-btn {
-            background: linear-gradient(to right, #28a745, #218838);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-            min-width: 200px;
-        }
-        
-        .memory-btn.clear {
-            background: linear-gradient(to right, #dc3545, #c82333);
-        }
-        
-        .memory-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .wire-gauge-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .wire-gauge-table th {
-            background-color: var(--primary);
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-        
-        .wire-gauge-table td {
-            padding: 12px;
-            border-bottom: 1px solid #eee;
-            text-align: center;
-        }
-        
-        .wire-gauge-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        
-        .wire-gauge-table tr:hover {
-            background-color: #f1f7ff;
-        }
-        
-        .memory-panel {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 20px;
-            margin-top: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .memory-panel h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .memory-panel h3 i {
-            margin-left: 10px;
-            color: var(--secondary);
-        }
-        
-        .memory-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .memory-stat {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        }
-        
-        .memory-value {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin: 5px 0;
-        }
-        
-        .memory-label {
-            font-size: 0.9rem;
-            color: #495057;
-            font-weight: 500;
-        }
-        
+
         .notification {
             position: fixed;
             top: 20px;
@@ -700,15 +382,101 @@
             transform: translateX(150%);
             transition: transform 0.3s ease;
         }
-        
+
         .notification.show {
             transform: translateX(0);
         }
-        
+
         .notification.error {
             background: var(--danger);
         }
-        
+
+        .system-summary {
+            background: linear-gradient(135deg, #1e5799, #3a86ff);
+            color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .summary-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .summary-title i {
+            margin-left: 10px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .summary-card {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .summary-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+
+        .summary-label {
+            font-size: 1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .cost-table {
+            width: 100%;
+            margin-top: 30px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cost-table th {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .cost-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+
+        .cost-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .cost-table tr:last-child td {
+            border-bottom: none;
+            font-weight: bold;
+            background-color: #f1f7ff;
+        }
+
+        .cost-table tr:hover {
+            background-color: #f1f7ff;
+        }
+
         @media (max-width: 768px) {
             .tabs {
                 flex-direction: column;
@@ -720,13 +488,16 @@
                 width: 100%;
             }
             
-            .results-grid, .consumption-grid, .cost-grid, .summary-grid, .memory-stats {
+            .results-grid, .summary-grid {
                 grid-template-columns: 1fr;
             }
             
-            .memory-buttons {
-                flex-direction: column;
-                align-items: center;
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -760,7 +531,6 @@
             <div class="tab" data-tab="inverter">حساب العاكس</div>
             <div class="tab" data-tab="wires">حساب السلك</div>
             <div class="tab" data-tab="summary">ملخص النظام</div>
-            <div class="tab" data-tab="memory">الذاكرة والإدارة</div>
         </div>
         
         <div class="main-content">
@@ -797,12 +567,6 @@
                 <div class="form-group">
                     <label for="kwhCost">سعر الكيلوواط ساعة (ريال يمني):</label>
                     <input type="number" id="kwhCost" min="1" value="80">
-                    <small>متوسط السعر في اليمن لعام 2025: 80-120 ريال/ك.و.س</small>
-                </div>
-                
-                <div class="solar-system-check">
-                    <input type="checkbox" id="solarSystem" name="solarSystem">
-                    <label for="solarSystem">هل لديك نظام طاقة شمسية؟</label>
                 </div>
                 
                 <button id="addAppliance" class="btn">
@@ -814,58 +578,23 @@
                     <div id="appliancesList" style="margin-top: 15px;"></div>
                 </div>
                 
-                <div class="memory-buttons">
-                    <button class="memory-btn" id="saveData">
-                        <i class="fas fa-save"></i> حفظ البيانات
-                    </button>
-                    <button class="memory-btn clear" id="clearData">
-                        <i class="fas fa-trash-alt"></i> مسح البيانات
-                    </button>
-                </div>
-                
-                <div class="consumption-grid">
-                    <div class="consumption-card">
-                        <div class="consumption-value" id="hourlyConsumption">0 واط/ساعة</div>
-                        <div class="consumption-label">الاستهلاك بالساعة</div>
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-value" id="hourlyConsumption">0 واط/ساعة</div>
+                        <div class="result-label">الاستهلاك بالساعة</div>
                     </div>
-                    <div class="consumption-card">
-                        <div class="consumption-value" id="dailyConsumption">0 ك.و.س</div>
-                        <div class="consumption-label">الاستهلاك اليومي</div>
+                    <div class="result-card">
+                        <div class="result-value" id="dailyConsumption">0 ك.و.س</div>
+                        <div class="result-label">الاستهلاك اليومي</div>
                     </div>
-                    <div class="consumption-card">
-                        <div class="consumption-value" id="monthlyConsumption">0 ك.و.س</div>
-                        <div class="consumption-label">الاستهلاك الشهري</div>
+                    <div class="result-card">
+                        <div class="result-value" id="monthlyConsumption">0 ك.و.س</div>
+                        <div class="result-label">الاستهلاك الشهري</div>
                     </div>
-                    <div class="consumption-card">
-                        <div class="consumption-value" id="yearlyConsumption">0 ك.و.س</div>
-                        <div class="consumption-label">الاستهلاك السنوي</div>
+                    <div class="result-card">
+                        <div class="result-value" id="yearlyConsumption">0 ك.و.س</div>
+                        <div class="result-label">الاستهلاك السنوي</div>
                     </div>
-                </div>
-                
-                <div class="cost-grid">
-                    <div class="cost-card">
-                        <div class="cost-value" id="dailyCost">0 ريال</div>
-                        <div class="cost-label">التكلفة اليومية</div>
-                    </div>
-                    <div class="cost-card">
-                        <div class="cost-value" id="monthlyCost">0 ريال</div>
-                        <div class="cost-label">التكلفة الشهرية</div>
-                    </div>
-                    <div class="cost-card">
-                        <div class="cost-value" id="yearlyCost">0 ريال</div>
-                        <div class="cost-label">التكلفة السنوية</div>
-                    </div>
-                </div>
-                
-                <div class="legal-section">
-                    <h3><i class="fas fa-balance-scale"></i> القوانين واللوائح لعام 2025</h3>
-                    <ul>
-                        <li>تحديد سعر الكيلوواط ساعة وفق تعرفة وزارة الكهرباء اليمنية لعام 2025</li>
-                        <li>تطبيق معامل تصحيح سنوي بنسبة 5% لمراعاة التضخم</li>
-                        <li>احتساب الضرائب بنسبة 10% على فواتير الاستهلاك فوق 500 ك.و.س شهرياً</li>
-                        <li>تطبيق تعرفة متدرجة للاستهلاك (شريحة أولى: 0-200 ك.و.س، شريحة ثانية: 201-500 ك.و.س، إلخ)</li>
-                        <li>تخفيض 15% على أنظمة الطاقة الشمسية المسجلة رسمياً</li>
-                    </ul>
                 </div>
             </div>
             
@@ -881,36 +610,26 @@
                 <div class="form-group">
                     <label for="sunHours">متوسط ساعات سطوع الشمس (ساعات/يوم):</label>
                     <input type="number" id="sunHours" min="1" max="12" value="6">
-                    <small>متوسط ساعات الشمس في اليمن: 6-8 ساعات يومياً</small>
                 </div>
                 
                 <div class="form-group">
                     <label for="panelPower">قوة اللوح الشمسي (واط):</label>
                     <input type="number" id="panelPower" min="100" max="1000" value="400">
-                    <small>متوسط قوة الألواح في 2025: 400-600 واط</small>
                 </div>
                 
                 <div class="form-group">
                     <label for="panelPrice">سعر اللوح الواحد (ريال):</label>
                     <input type="number" id="panelPrice" min="100" max="5000" value="400">
-                    <small>متوسط السعر في 2025: 400-600 ريال للوح</small>
                 </div>
                 
                 <div class="form-group">
                     <label for="panelEfficiency">كفاءة الألواح الشمسية (%):</label>
                     <input type="number" id="panelEfficiency" min="1" max="100" value="20">
-                    <small>متوسط كفاءة الألواح في 2025: 20-25%</small>
                 </div>
                 
                 <button id="calculatePanels" class="btn">
                     <i class="fas fa-calculator"></i> احتساب الألواح المطلوبة
                 </button>
-                
-                <div class="formula-box">
-                    <strong>المعادلة المستخدمة:</strong><br>
-                    الطاقة المطلوبة = (الاستهلاك اليومي / ساعات الشمس) × 1.45 (معامل أمان)<br>
-                    عدد الألواح = سقف(الطاقة المطلوبة × 1000 / قوة اللوح)
-                </div>
                 
                 <div class="results-grid">
                     <div class="result-card">
@@ -930,16 +649,6 @@
                         <div class="result-label">التكلفة التقريبية</div>
                     </div>
                 </div>
-                
-                <div class="info-card">
-                    <h3><i class="fas fa-lightbulb"></i> معلومات تقنية</h3>
-                    <ul>
-                        <li>يتم احتساب المساحة المطلوبة بناءً على 2 متر مربع لكل لوح 400 واط</li>
-                        <li>معامل الأمان 45% يشمل خسائر النظام والتغيرات الموسمية</li>
-                        <li>للحصول على أفضل أداء، قم بتنظيف الألواح الشمسية بانتظام</li>
-                        <li>زاوية الميل المثلى في اليمن هي 15-20 درجة باتجاه الجنوب</li>
-                    </ul>
-                </div>
             </div>
             
             <!-- حساب البطاريات -->
@@ -947,18 +656,31 @@
                 <h2 class="section-title"><i class="fas fa-car-battery"></i> حساب البطاريات</h2>
                 
                 <div class="form-group">
-                    <label for="dailyConsumptionBattery">الاستهلاك اليومي (ك.و.س):</label>
-                    <input type="number" id="dailyConsumptionBattery" placeholder="أدخل الاستهلاك اليومي">
+                    <label for="operatingHours">عدد ساعات التشغيل اليومية:</label>
+                    <input type="number" id="operatingHours" min="1" max="24" value="8">
                 </div>
                 
                 <div class="form-group">
-                    <label for="autonomyDays">عدد أيام الحفظ (أيام):</label>
-                    <input type="number" id="autonomyDays" min="1" max="10" value="2">
-                    <small>عدد الأيام التي يجب أن تعمل فيها البطاريات دون شمس</small>
+                    <label for="hourlyConsumptionBattery">الاستهلاك الفعلي بالساعة (واط/ساعة):</label>
+                    <input type="number" id="hourlyConsumptionBattery" placeholder="أدخل الاستهلاك بالساعة">
                 </div>
                 
                 <div class="form-group">
-                    <label for="batteryVoltage">جهد النظام (فولت):</label>
+                    <label for="dischargeRate">نسبة التفريغ (%):</label>
+                    <input type="number" id="dischargeRate" min="1" max="100" value="50">
+                </div>
+                
+                <div class="form-group">
+                    <label for="batteryType">نوع البطارية:</label>
+                    <select id="batteryType">
+                        <option value="lead-acid">بطارية الرصاص الحمضية</option>
+                        <option value="lithium">بطارية الليثيوم (Li-ion)</option>
+                        <option value="lifepo4">بطارية ليثيوم فوسفات (LiFePO4)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="batteryVoltage">جهد البطارية (فولت):</label>
                     <select id="batteryVoltage">
                         <option value="12">12V</option>
                         <option value="24">24V</option>
@@ -968,62 +690,31 @@
                 
                 <div class="form-group">
                     <label for="batteryCapacity">سعة البطارية (أمبير.ساعة):</label>
-                    <input type="number" id="batteryCapacity" min="50" max="1000" value="200">
-                    <small>سعة البطارية الواحدة (100-200 أمبير.ساعة)</small>
+                    <input type="number" id="batteryCapacity" min="10" max="1000" value="200">
                 </div>
                 
                 <div class="form-group">
-                    <label for="batteryType">نوع البطارية:</label>
-                    <select id="batteryType">
-                        <option value="lead-acid">بطارية الرصاص الحمضية</option>
-                        <option value="lithium">بطارية الليثيوم (Li-ion)</option>
-                        <option value="lifepo4">بطارية ليثيوم فوسفات (LiFePO4)</option>
-                        <option value="gel">بطارية الجل (Gel)</option>
-                        <option value="agm">بطارية AGM</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="batteryPrice">سعر البطارية (ريال):</label>
-                    <input type="number" id="batteryPrice" min="50" max="5000" value="150">
-                    <small>أدخل سعر البطارية الواحدة</small>
+                    <label for="batteryPrice">سعر البطارية الواحدة (ريال):</label>
+                    <input type="number" id="batteryPrice" min="100" max="50000" value="1500">
                 </div>
                 
                 <button id="calculateBatteries" class="btn">
                     <i class="fas fa-calculator"></i> احتساب البطاريات المطلوبة
                 </button>
                 
-                <div class="formula-box">
-                    <strong>المعادلة المستخدمة:</strong><br>
-                    السعة المطلوبة (واط.ساعة) = الاستهلاك اليومي × أيام الحفظ × 1000<br>
-                    السعة المطلوبة (أمبير.ساعة) = السعة المطلوبة (واط.ساعة) / جهد النظام / عمق التفريغ<br>
-                    عدد البطاريات = سقف(السعة المطلوبة / سعة البطارية)
-                </div>
-                
                 <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-value" id="requiredBatteries">0</div>
+                        <div class="result-label">عدد البطاريات المطلوبة</div>
+                    </div>
                     <div class="result-card">
                         <div class="result-value" id="requiredCapacity">0 أمبير.ساعة</div>
                         <div class="result-label">السعة المطلوبة</div>
                     </div>
                     <div class="result-card">
-                        <div class="result-value" id="requiredBatteries">0</div>
-                        <div class="result-label">عدد البطاريات</div>
-                    </div>
-                    <div class="result-card">
-                        <div class="result-value" id="batterySystemCost">0 ريال</div>
+                        <div class="result-value" id="batteryCost">0 ريال</div>
                         <div class="result-label">التكلفة التقريبية</div>
                     </div>
-                </div>
-                
-                <div class="info-card">
-                    <h3><i class="fas fa-info-circle"></i> مميزات أنواع البطاريات</h3>
-                    <ul>
-                        <li><span class="battery-type battery-lead">الرصاص الحمضية</span>: منخفضة التكلفة، عمق تفريغ 50%، عمر 3-5 سنوات</li>
-                        <li><span class="battery-type battery-lithium">ليثيوم (Li-ion)</span>: عمق تفريغ 80%، خفيفة الوزن، عمر 5-7 سنوات</li>
-                        <li><span class="battery-type battery-lithium">ليثيوم فوسفات</span>: عمق تفريغ 90%، آمنة، عمر 7-10 سنوات</li>
-                        <li><span class="battery-type battery-gel">بطارية الجل</span>: لا تحتاج صيانة، مقاومة للاهتزاز، عمق تفريغ 60%</li>
-                        <li><span class="battery-type battery-agm">بطارية AGM</span>: أداء عالي في الطقس البارد، عمق تفريغ 70%</li>
-                    </ul>
                 </div>
             </div>
             
@@ -1039,7 +730,6 @@
                 <div class="form-group">
                     <label for="maxAppliancePower">أعلى استهلاك للجهاز (واط):</label>
                     <input type="number" id="maxAppliancePower" placeholder="أدخل أعلى استهلاك">
-                    <small>مثل: مكيف الهواء، المحركات، إلخ</small>
                 </div>
                 
                 <div class="form-group">
@@ -1053,17 +743,11 @@
                 <div class="form-group">
                     <label for="inverterPrice">السعر التقريبي للعاكس (ريال):</label>
                     <input type="number" id="inverterPrice" min="100" max="50000" value="2500">
-                    <small>متوسط سعر العاكس: 2000-4000 ريال</small>
                 </div>
                 
                 <button id="calculateInverter" class="btn">
                     <i class="fas fa-calculator"></i> احتساب مواصفات العاكس
                 </button>
-                
-                <div class="formula-box">
-                    <strong>المعادلة المستخدمة:</strong><br>
-                    حجم العاكس = القيمة الأكبر من (إجمالي استهلاك الأجهزة، أعلى استهلاك للجهاز) × معامل أمان 1.25
-                </div>
                 
                 <div class="results-grid">
                     <div class="result-card">
@@ -1074,16 +758,6 @@
                         <div class="result-value" id="inverterCost">0 ريال</div>
                         <div class="result-label">التكلفة التقريبية</div>
                     </div>
-                </div>
-                
-                <div class="info-card">
-                    <h3><i class="fas fa-info-circle"></i> معلومات تقنية</h3>
-                    <ul>
-                        <li>العاكسات ذات الموجة النقية أفضل للأجهزة الحساسة (تكييف، كمبيوتر، إلخ)</li>
-                        <li>معامل الأمان 25% لحساب الأحمال المفاجئة عند بدء تشغيل المحركات</li>
-                        <li>اختر عاكساً بجهد متوافق مع جهد النظام (12/24/48 فولت)</li>
-                        <li>العاكسات الكبيرة تتطلب أسلاكاً ذات مقطع عرضي أكبر</li>
-                    </ul>
                 </div>
             </div>
             
@@ -1109,7 +783,6 @@
                 <div class="form-group">
                     <label for="voltageDrop">الحد الأقصى لهبوط الجهد (%):</label>
                     <input type="number" id="voltageDrop" min="1" max="10" value="3">
-                    <small>القيمة الموصى بها: 3%</small>
                 </div>
                 
                 <div class="form-group">
@@ -1120,16 +793,14 @@
                     </select>
                 </div>
                 
+                <div class="form-group">
+                    <label for="wirePrice">سعر المتر للسلك (ريال):</label>
+                    <input type="number" id="wirePrice" min="10" max="1000" value="50">
+                </div>
+                
                 <button id="calculateWire" class="btn">
                     <i class="fas fa-calculator"></i> احتساب مقاس السلك
                 </button>
-                
-                <div class="formula-box">
-                    <strong>المعادلة المستخدمة:</strong><br>
-                    هبوط الجهد المسموح = جهد النظام × (هبوط الجهد % / 100)<br>
-                    المقاومة المسموحة = هبوط الجهد المسموح / (التيار × 2)<br>
-                    المقطع العرضي = (المقاومة النوعية × المسافة × 2) / المقاومة المسموحة
-                </div>
                 
                 <div class="results-grid">
                     <div class="result-card">
@@ -1140,57 +811,6 @@
                         <div class="result-value" id="wireCost">0 ريال</div>
                         <div class="result-label">التكلفة التقريبية</div>
                     </div>
-                </div>
-                
-                <div class="wire-gauge-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>مقاس السلك (مم²)</th>
-                                <th>التيار الأقصى (أمبير)</th>
-                                <th>المقاومة (أوم/كم)</th>
-                                <th>السعر التقريبي (ريال/متر)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1.5</td>
-                                <td>16</td>
-                                <td>12.1</td>
-                                <td>50</td>
-                            </tr>
-                            <tr>
-                                <td>2.5</td>
-                                <td>25</td>
-                                <td>7.41</td>
-                                <td>70</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>32</td>
-                                <td>4.61</td>
-                                <td>100</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>40</td>
-                                <td>3.08</td>
-                                <td>150</td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td>55</td>
-                                <td>1.83</td>
-                                <td>220</td>
-                            </tr>
-                            <tr>
-                                <td>16</td>
-                                <td>80</td>
-                                <td>1.15</td>
-                                <td>350</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
             
@@ -1223,7 +843,7 @@
                         </div>
                     </div>
                     
-                    <div class="cost-grid" style="margin-top: 25px;">
+                    <div class="summary-grid" style="margin-top: 25px;">
                         <div class="summary-card">
                             <div class="summary-value" id="sPanelCost">0 ريال</div>
                             <div class="summary-label">تكلفة الألواح</div>
@@ -1248,99 +868,44 @@
                     </div>
                 </div>
                 
-                <div class="memory-buttons">
-                    <button class="memory-btn" id="saveSummary">
-                        <i class="fas fa-print"></i> طباعة الملخص
-                    </button>
-                    <button class="memory-btn" id="saveAllData">
-                        <i class="fas fa-download"></i> حفظ جميع البيانات
-                    </button>
-                </div>
-                
-                <div class="info-card" style="margin-top: 30px;">
-                    <h3><i class="fas fa-lightbulb"></i> نصائح لتحسين النظام</h3>
-                    <ul>
-                        <li>اختر الألواح الشمسية ذات الكفاءة العالية (20% فأكثر)</li>
-                        <li>استخدم بطاريات الليثيوم فوسفات للحصول على أفضل أداء وعمر أطول</li>
-                        <li>اختر عاكساً بقوة أعلى 20% من احتياجاتك لاستيعاب التوسعات المستقبلية</li>
-                        <li>تأكد من زاوية ميل الألواح الشمسية لتتناسب مع موقعك الجغرافي</li>
-                        <li>استشر مهندساً متخصصاً قبل تركيب النظام للحصول على أفضل النتائج</li>
-                    </ul>
-                </div>
-                
-                <div class="legal-section">
-                    <h3><i class="fas fa-file-contract"></i> متطلبات التثبيت والتراخيص</h3>
-                    <ul>
-                        <li>الحصول على موافقة وزارة الكهرباء والطاقة المتجددة</li>
-                        <li>استخدام معدات معتمدة من الهيئة اليمنية للمواصفات والمقاييس</li>
-                        <li>وجود عقد صيانة دورية مع شركة مرخصة</li>
-                        <li>تسجيل النظام في سجل الطاقة المتجددة للحصول على الدعم</li>
-                        <li>التأكد من مطابقة التركيبات للشروط الفنية والسلامة</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- الذاكرة والإدارة -->
-            <div class="tab-content" id="memory">
-                <h2 class="section-title"><i class="fas fa-database"></i> ذاكرة تخزين البيانات والإدارة</h2>
-                
-                <div class="memory-panel">
-                    <h3><i class="fas fa-save"></i> إدارة تخزين البيانات</h3>
-                    <p>يمكنك حفظ جميع بيانات النظام واستعادتها في أي وقت، مما يسمح لك بمتابعة مشروعك دون فقدان المعلومات.</p>
+                <div style="margin-top: 30px;">
+                    <h3 class="section-title"><i class="fas fa-money-bill-wave"></i> تكلفة الاستهلاك الكهربائي</h3>
                     
-                    <div class="memory-buttons">
-                        <button class="memory-btn" id="saveDataMemory">
-                            <i class="fas fa-save"></i> حفظ البيانات الحالية
-                        </button>
-                        <button class="memory-btn" id="loadData">
-                            <i class="fas fa-folder-open"></i> استعادة البيانات
-                        </button>
-                        <button class="memory-btn clear" id="clearAllData">
-                            <i class="fas fa-trash-alt"></i> مسح جميع البيانات
-                        </button>
-                    </div>
-                    
-                    <div class="memory-stats">
-                        <div class="memory-stat">
-                            <div class="memory-value" id="memoryUsage">0%</div>
-                            <div class="memory-label">مساحة التخزين المستخدمة</div>
-                        </div>
-                        <div class="memory-stat">
-                            <div class="memory-value" id="lastSave">غير متاح</div>
-                            <div class="memory-label">آخر حفظ للبيانات</div>
-                        </div>
-                        <div class="memory-stat">
-                            <div class="memory-value" id="dataSize">0 كيلوبايت</div>
-                            <div class="memory-label">حجم البيانات</div>
-                        </div>
-                        <div class="memory-stat">
-                            <div class="memory-value" id="savedItems">0</div>
-                            <div class="memory-label">عدد العناصر المحفوظة</div>
-                        </div>
-                    </div>
+                    <table class="cost-table">
+                        <thead>
+                            <tr>
+                                <th>الفترة</th>
+                                <th>الاستهلاك (ك.و.س)</th>
+                                <th>التكلفة (ريال يمني)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>يوميًا</td>
+                                <td id="dailyConsumptionSummary">0</td>
+                                <td id="dailyCost">0</td>
+                            </tr>
+                            <tr>
+                                <td>شهريًا</td>
+                                <td id="monthlyConsumptionSummary">0</td>
+                                <td id="monthlyCost">0</td>
+                            </tr>
+                            <tr>
+                                <td>سنويًا</td>
+                                <td id="yearlyConsumptionSummary">0</td>
+                                <td id="yearlyCost">0</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">التوفير السنوي المتوقع</td>
+                                <td id="yearlySavings">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 
-                <div class="info-card" style="margin-top: 30px;">
-                    <h3><i class="fas fa-info-circle"></i> معلومات عن الذاكرة</h3>
-                    <ul>
-                        <li>يتم تخزين البيانات محلياً في متصفحك باستخدام تقنية LocalStorage</li>
-                        <li>البيانات تبقى محفوظة حتى عند إغلاق المتصفح أو إعادة تشغيل الجهاز</li>
-                        <li>يمكنك تصدير البيانات لاستخدامها على أجهزة أخرى</li>
-                        <li>يتم تحديث إحصائيات التخزين تلقائياً بعد كل عملية حفظ</li>
-                        <li>الحد الأقصى للتخزين: 5 ميجابايت لكل موقع</li>
-                    </ul>
-                </div>
-                
-                <div class="legal-section">
-                    <h3><i class="fas fa-shield-alt"></i> الأمان والخصوصية</h3>
-                    <ul>
-                        <li>جميع البيانات تخزن محلياً على جهازك ولا يتم إرسالها لأي خادم خارجي</li>
-                        <li>يمكنك مسح البيانات في أي وقت دون ترك أي آثار</li>
-                        <li>نوصي بعدم تخزين بيانات حساسة في هذا النظام</li>
-                        <li>لحماية بياناتك، استخدم كلمات مرور قوية لأجهزتك</li>
-                        <li>البيانات المحفوظة مشفرة باستخدام تقنيات متصفح آمنة</li>
-                    </ul>
-                </div>
+                <button id="printSummary" class="btn" style="margin-top: 20px;">
+                    <i class="fas fa-print"></i> طباعة الملخص
+                </button>
             </div>
         </div>
         
@@ -1382,24 +947,15 @@
             
             tabs.forEach(tab => {
                 tab.addEventListener('click', () => {
-                    // Remove active class from all tabs
                     tabs.forEach(t => t.classList.remove('active'));
                     tabContents.forEach(c => c.classList.remove('active'));
                     
-                    // Add active class to clicked tab
                     tab.classList.add('active');
-                    
-                    // Show corresponding content
                     const tabId = tab.getAttribute('data-tab');
                     document.getElementById(tabId).classList.add('active');
                     
-                    // Update summary when summary tab is clicked
                     if(tabId === 'summary') {
                         updateSystemSummary();
-                    }
-                    // Update memory stats when memory tab is clicked
-                    if(tabId === 'memory') {
-                        updateMemoryStats();
                     }
                 });
             });
@@ -1437,7 +993,6 @@
                 const applianceName = applianceSelect.options[applianceSelect.selectedIndex].text;
                 let wattage = wattageInput.value;
                 
-                // If appliance is selected from list, use predefined wattage
                 if (applianceSelect.value && !wattage) {
                     const matches = applianceName.match(/\((\d+)/);
                     if (matches) wattage = matches[1];
@@ -1456,7 +1011,7 @@
                 
                 updateAppliancesList();
                 calculateConsumption();
-                saveToLocalStorage();
+                updateSystemSummary();
                 
                 showNotification('تمت إضافة الجهاز بنجاح');
             });
@@ -1513,7 +1068,7 @@
                     appliances.splice(index, 1);
                     updateAppliancesList();
                     calculateConsumption();
-                    saveToLocalStorage();
+                    updateSystemSummary();
                     showNotification(`تم حذف الجهاز "${applianceName}"`);
                 }
             }
@@ -1527,46 +1082,39 @@
                     totalDaily += appliance.wattage * appliance.hours / 1000;
                 });
                 
-                // Get electricity cost
-                const kwhCost = parseFloat(document.getElementById('kwhCost').value) || 80;
-                
-                // Calculate costs
-                const dailyCost = totalDaily * kwhCost;
-                const monthlyCost = dailyCost * 30;
-                const yearlyCost = dailyCost * 365;
-                
-                // Apply 2025 regulations (5% inflation adjustment)
-                const inflationRate = 0.05;
-                const adjustedYearlyCost = yearlyCost * (1 + inflationRate);
-                
-                // Apply tax for consumption above 500 kWh/month
-                const taxRate = 0.10;
-                let tax = 0;
-                if (totalDaily * 30 > 500) {
-                    tax = monthlyCost * taxRate;
-                }
-                
-                // Apply solar discount
-                const solarSystem = document.getElementById('solarSystem').checked;
-                const solarDiscount = solarSystem ? 0.15 : 0;
-                const discount = yearlyCost * solarDiscount;
-                
-                const finalYearlyCost = adjustedYearlyCost + tax - discount;
-                
-                // Update consumption display
                 document.getElementById('hourlyConsumption').textContent = totalHourly.toFixed(0) + ' واط/ساعة';
                 document.getElementById('dailyConsumption').textContent = totalDaily.toFixed(2) + ' ك.و.س';
                 document.getElementById('monthlyConsumption').textContent = (totalDaily * 30).toFixed(2) + ' ك.و.س';
                 document.getElementById('yearlyConsumption').textContent = (totalDaily * 365).toFixed(2) + ' ك.و.س';
                 
-                // Update cost display
-                document.getElementById('dailyCost').textContent = dailyCost.toFixed(0) + ' ريال';
-                document.getElementById('monthlyCost').textContent = monthlyCost.toFixed(0) + ' ريال';
-                document.getElementById('yearlyCost').textContent = finalYearlyCost.toFixed(0) + ' ريال';
-                
-                // Set consumption value for other tabs
                 document.getElementById('dailyConsumptionInput').value = totalDaily.toFixed(2);
-                document.getElementById('dailyConsumptionBattery').value = totalDaily.toFixed(2);
+                document.getElementById('hourlyConsumptionBattery').value = totalHourly.toFixed(0);
+                
+                // Update consumption summary
+                updateConsumptionCost();
+            }
+            
+            function updateConsumptionCost() {
+                const dailyConsumption = parseFloat(document.getElementById('dailyConsumption').textContent) || 0;
+                const kwhCost = parseFloat(document.getElementById('kwhCost').value) || 80;
+                
+                const monthlyConsumption = (dailyConsumption * 30).toFixed(2);
+                const yearlyConsumption = (dailyConsumption * 365).toFixed(2);
+                
+                const dailyCost = (dailyConsumption * kwhCost).toFixed(2);
+                const monthlyCost = (monthlyConsumption * kwhCost).toFixed(2);
+                const yearlyCost = (yearlyConsumption * kwhCost).toFixed(2);
+                
+                document.getElementById('dailyConsumptionSummary').textContent = dailyConsumption;
+                document.getElementById('monthlyConsumptionSummary').textContent = monthlyConsumption;
+                document.getElementById('yearlyConsumptionSummary').textContent = yearlyConsumption;
+                
+                document.getElementById('dailyCost').textContent = dailyCost;
+                document.getElementById('monthlyCost').textContent = monthlyCost;
+                document.getElementById('yearlyCost').textContent = yearlyCost;
+                
+                // Calculate savings (same as yearly cost for now)
+                document.getElementById('yearlySavings').textContent = yearlyCost;
             }
             
             // Panel calculation
@@ -1577,81 +1125,51 @@
                 const panelPrice = parseFloat(document.getElementById('panelPrice').value) || 400;
                 const efficiency = parseFloat(document.getElementById('panelEfficiency').value) || 20;
                 
-                // Validate inputs
                 if(dailyConsumption <= 0 || sunHours <= 0 || panelPower <= 0) {
                     showNotification('الرجاء إدخال قيم صحيحة أكبر من الصفر', true);
                     return;
                 }
                 
-                // Calculate required power
-                const safetyFactor = 1.45; // 45% safety factor (losses + seasonal)
-                
-                // Required power in kW
+                const safetyFactor = 1.45;
                 const requiredPower = (dailyConsumption / sunHours / (efficiency/100) * safetyFactor).toFixed(2);
-                
-                // Calculate number of panels
                 const requiredPanels = Math.ceil((requiredPower * 1000) / panelPower);
-                
-                // Calculate required area (2 sqm per panel for 400W panels)
-                const panelAreaPerUnit = 2 * (panelPower / 400); // Adjust area based on panel power
+                const panelAreaPerUnit = (panelPower / (1000 * (efficiency/100))) * 1.2;
                 const panelArea = (requiredPanels * panelAreaPerUnit).toFixed(1);
-                
-                // Calculate cost
                 const panelCost = (requiredPanels * panelPrice).toLocaleString();
                 
-                // Update results
                 document.getElementById('requiredPower').textContent = requiredPower + ' ك.و';
                 document.getElementById('requiredPanels').textContent = requiredPanels;
                 document.getElementById('panelArea').textContent = panelArea + ' م²';
                 document.getElementById('panelCost').textContent = panelCost + ' ريال';
                 
-                saveToLocalStorage();
+                updateSystemSummary();
                 showNotification('تم حساب الألواح الشمسية بنجاح');
             });
             
             // Battery calculation
             document.getElementById('calculateBatteries').addEventListener('click', function() {
-                const dailyConsumption = parseFloat(document.getElementById('dailyConsumptionBattery').value) || 0;
-                const autonomyDays = parseFloat(document.getElementById('autonomyDays').value) || 2;
+                const operatingHours = parseFloat(document.getElementById('operatingHours').value) || 0;
+                const hourlyConsumption = parseFloat(document.getElementById('hourlyConsumptionBattery').value) || 0;
+                const dischargeRate = parseFloat(document.getElementById('dischargeRate').value) || 50;
                 const batteryVoltage = parseFloat(document.getElementById('batteryVoltage').value) || 48;
                 const batteryCapacity = parseFloat(document.getElementById('batteryCapacity').value) || 200;
-                const batteryType = document.getElementById('batteryType').value;
-                const batteryPrice = parseFloat(document.getElementById('batteryPrice').value) || 150;
+                const batteryPrice = parseFloat(document.getElementById('batteryPrice').value) || 1500;
                 
-                // Validate inputs
-                if(dailyConsumption <= 0 || autonomyDays <= 0 || batteryVoltage <= 0 || batteryCapacity <= 0) {
+                if(operatingHours <= 0 || hourlyConsumption <= 0 || dischargeRate <= 0 || batteryCapacity <= 0) {
                     showNotification('الرجاء إدخال قيم صحيحة أكبر من الصفر', true);
                     return;
                 }
                 
-                // Depth of discharge based on battery type
-                let dod;
-                switch(batteryType) {
-                    case 'lithium': dod = 0.80; break;
-                    case 'lifepo4': dod = 0.90; break;
-                    case 'gel': dod = 0.60; break;
-                    case 'agm': dod = 0.70; break;
-                    default: dod = 0.50; // lead-acid
-                }
+                const dischargeFactor = dischargeRate / 100;
+                const requiredCapacity = (hourlyConsumption * operatingHours) / (batteryVoltage * dischargeFactor);
+                const requiredBatteries = Math.ceil(requiredCapacity / batteryCapacity);
+                const batteryCost = (requiredBatteries * batteryPrice).toLocaleString();
                 
-                // Required capacity in Wh
-                const requiredWh = dailyConsumption * 1000 * autonomyDays;
-                
-                // Required capacity in Ah
-                const requiredAh = (requiredWh / (batteryVoltage * dod));
-                
-                // Calculate number of batteries
-                const requiredBatteries = Math.ceil(requiredAh / batteryCapacity);
-                
-                // Calculate cost
-                const batterySystemCost = (requiredBatteries * batteryPrice).toLocaleString();
-                
-                // Update results
-                document.getElementById('requiredCapacity').textContent = Math.ceil(requiredAh) + ' أمبير.ساعة';
+                document.getElementById('requiredCapacity').textContent = Math.ceil(requiredCapacity) + ' أمبير.ساعة';
                 document.getElementById('requiredBatteries').textContent = requiredBatteries;
-                document.getElementById('batterySystemCost').textContent = batterySystemCost + ' ريال';
+                document.getElementById('batteryCost').textContent = batteryCost + ' ريال';
                 
-                saveToLocalStorage();
+                updateSystemSummary();
                 showNotification('تم حساب البطاريات بنجاح');
             });
             
@@ -1661,23 +1179,19 @@
                 const maxAppliancePower = parseFloat(document.getElementById('maxAppliancePower').value) || 0;
                 const inverterPrice = parseFloat(document.getElementById('inverterPrice').value) || 2500;
                 
-                // Validate inputs
                 if(totalPower <= 0 || maxAppliancePower <= 0) {
                     showNotification('الرجاء إدخال قيم صحيحة أكبر من الصفر', true);
                     return;
                 }
                 
-                // Safety factor for surge power
-                const safetyFactor = 1.25; // 25% safety factor
-                
-                // Required inverter size
+                const safetyFactor = 1.25;
                 const inverterSize = Math.max(totalPower, maxAppliancePower) * safetyFactor;
+                const inverterCost = inverterPrice.toLocaleString();
                 
-                // Update results
                 document.getElementById('inverterSize').textContent = Math.ceil(inverterSize) + ' واط';
-                document.getElementById('inverterCost').textContent = inverterPrice.toLocaleString() + ' ريال';
+                document.getElementById('inverterCost').textContent = inverterCost + ' ريال';
                 
-                saveToLocalStorage();
+                updateSystemSummary();
                 showNotification('تم حساب العاكس بنجاح');
             });
             
@@ -1688,29 +1202,19 @@
                 const voltage = parseFloat(document.getElementById('voltage').value) || 48;
                 const voltageDropPercent = parseFloat(document.getElementById('voltageDrop').value) || 3;
                 const wireType = document.getElementById('wireType').value;
+                const wirePrice = parseFloat(document.getElementById('wirePrice').value) || 50;
                 
-                // Validate inputs
                 if(current <= 0 || distance <= 0 || voltage <= 0) {
                     showNotification('الرجاء إدخال قيم صحيحة أكبر من الصفر', true);
                     return;
                 }
                 
-                // Calculate maximum allowable voltage drop
                 const maxVoltageDrop = (voltage * voltageDropPercent) / 100;
-                
-                // Calculate maximum resistance
-                const maxResistance = maxVoltageDrop / (current * 2); // 2 for round trip
-                
-                // Resistivity based on wire type (ohm/m)
-                const resistivity = wireType === 'copper' ? 0.0172 : 0.0282; // ohm per mm² per meter
-                
-                // Calculate required cross-sectional area
+                const maxResistance = maxVoltageDrop / (current * 2);
+                const resistivity = wireType === 'copper' ? 0.0172 : 0.0282;
                 const requiredArea = (resistivity * distance * 2) / maxResistance;
                 
-                // Standard wire sizes
                 const standardSizes = [1.5, 2.5, 4, 6, 10, 16, 25, 35, 50];
-                
-                // Find the smallest standard size that meets the requirement
                 let wireSize = 1.5;
                 for (const size of standardSizes) {
                     if (size >= requiredArea) {
@@ -1719,279 +1223,59 @@
                     }
                 }
                 
-                // If required area is larger than the largest standard size
                 if (requiredArea > standardSizes[standardSizes.length - 1]) {
                     wireSize = Math.ceil(requiredArea);
                 }
                 
-                // Calculate wire cost (price per meter)
-                const wirePrices = {
-                    1.5: 50,
-                    2.5: 70,
-                    4: 100,
-                    6: 150,
-                    10: 220,
-                    16: 350,
-                    25: 500,
-                    35: 700,
-                    50: 900
-                };
+                const wireCost = (distance * wirePrice * wireSize).toLocaleString();
                 
-                const wireCostPerMeter = wirePrices[wireSize] || wireSize * 20; // Default formula if size not in table
-                const wireCost = (distance * wireCostPerMeter).toLocaleString();
-                
-                // Update results
                 document.getElementById('wireSize').textContent = wireSize + ' مم²';
                 document.getElementById('wireCost').textContent = wireCost + ' ريال';
                 
-                saveToLocalStorage();
+                updateSystemSummary();
                 showNotification('تم حساب السلك الكهربائي بنجاح');
             });
             
             // Update system summary
             function updateSystemSummary() {
-                const panels = document.getElementById('requiredPanels').textContent || '0';
-                const batteries = document.getElementById('requiredBatteries').textContent || '0';
-                const inverter = document.getElementById('inverterSize').textContent || '0 واط';
-                const area = document.getElementById('panelArea').textContent || '0 م²';
-                const panelCost = document.getElementById('panelCost').textContent || '0 ريال';
-                const batteryCost = document.getElementById('batterySystemCost').textContent || '0 ريال';
-                const inverterCost = document.getElementById('inverterCost').textContent || '0 ريال';
-                const wireCost = document.getElementById('wireCost').textContent || '0 ريال';
-                
-                // Calculate total cost
-                const totalCost = (
-                    parseFloat(panelCost.replace(/\D/g, '')) +
-                    parseFloat(batteryCost.replace(/\D/g, '')) +
-                    parseFloat(inverterCost.replace(/\D/g, '')) +
-                    parseFloat(wireCost.replace(/\D/g, ''))
-                ).toLocaleString();
-                
-                // Update summary
-                document.getElementById('sPanels').textContent = panels;
-                document.getElementById('sBatteries').textContent = batteries;
-                document.getElementById('sInverter').textContent = inverter;
-                document.getElementById('sArea').textContent = area;
-                document.getElementById('sPanelCost').textContent = panelCost;
-                document.getElementById('sBatteryCost').textContent = batteryCost;
-                document.getElementById('sInverterCost').textContent = inverterCost;
-                document.getElementById('sWireCost').textContent = wireCost;
-                document.getElementById('sTotalCost').textContent = totalCost + ' ريال';
-            }
-            
-            // Update memory statistics
-            function updateMemoryStats() {
-                const savedData = localStorage.getItem('solarSystemData');
-                const memoryUsage = savedData ? Math.round((savedData.length / (5 * 1024)) * 100) : 0;
-                const dataSize = savedData ? (savedData.length / 1024).toFixed(2) : 0;
-                
-                document.getElementById('memoryUsage').textContent = memoryUsage + '%';
-                document.getElementById('dataSize').textContent = dataSize + ' كيلوبايت';
-                
-                if (savedData) {
-                    const data = JSON.parse(savedData);
-                    const itemsCount = data.appliances.length;
-                    document.getElementById('savedItems').textContent = itemsCount;
+                try {
+                    const panels = document.getElementById('requiredPanels').textContent || '0';
+                    const batteries = document.getElementById('requiredBatteries').textContent || '0';
+                    const inverter = document.getElementById('inverterSize').textContent || '0 واط';
+                    const area = document.getElementById('panelArea').textContent || '0 م²';
                     
-                    const saveDate = new Date();
-                    document.getElementById('lastSave').textContent = saveDate.toLocaleString();
-                } else {
-                    document.getElementById('savedItems').textContent = '0';
-                    document.getElementById('lastSave').textContent = 'غير متاح';
+                    const panelCost = parseFloat(document.getElementById('panelCost').textContent.replace(/[^0-9.]/g, '')) || 0;
+                    const batteryCost = parseFloat(document.getElementById('batteryCost').textContent.replace(/[^0-9.]/g, '')) || 0;
+                    const inverterCost = parseFloat(document.getElementById('inverterCost').textContent.replace(/[^0-9.]/g, '')) || 0;
+                    const wireCost = parseFloat(document.getElementById('wireCost').textContent.replace(/[^0-9.]/g, '')) || 0;
+                    
+                    const totalCost = panelCost + batteryCost + inverterCost + wireCost;
+                    
+                    document.getElementById('sPanels').textContent = panels;
+                    document.getElementById('sBatteries').textContent = batteries;
+                    document.getElementById('sInverter').textContent = inverter;
+                    document.getElementById('sArea').textContent = area;
+                    document.getElementById('sPanelCost').textContent = panelCost.toLocaleString() + ' ريال';
+                    document.getElementById('sBatteryCost').textContent = batteryCost.toLocaleString() + ' ريال';
+                    document.getElementById('sInverterCost').textContent = inverterCost.toLocaleString() + ' ريال';
+                    document.getElementById('sWireCost').textContent = wireCost.toLocaleString() + ' ريال';
+                    document.getElementById('sTotalCost').textContent = totalCost.toLocaleString() + ' ريال';
+                    
+                    // Update consumption cost in summary
+                    updateConsumptionCost();
+                    
+                } catch (error) {
+                    console.error('Error updating system summary:', error);
                 }
             }
             
-            // Save data to localStorage
-            function saveToLocalStorage() {
-                const data = {
-                    appliances: appliances,
-                    kwhCost: document.getElementById('kwhCost').value,
-                    solarSystem: document.getElementById('solarSystem').checked,
-                    panels: {
-                        dailyConsumption: document.getElementById('dailyConsumptionInput').value,
-                        sunHours: document.getElementById('sunHours').value,
-                        panelPower: document.getElementById('panelPower').value,
-                        panelPrice: document.getElementById('panelPrice').value,
-                        efficiency: document.getElementById('panelEfficiency').value
-                    },
-                    batteries: {
-                        dailyConsumption: document.getElementById('dailyConsumptionBattery').value,
-                        autonomyDays: document.getElementById('autonomyDays').value,
-                        batteryVoltage: document.getElementById('batteryVoltage').value,
-                        batteryCapacity: document.getElementById('batteryCapacity').value,
-                        batteryType: document.getElementById('batteryType').value,
-                        batteryPrice: document.getElementById('batteryPrice').value
-                    },
-                    inverter: {
-                        totalPower: document.getElementById('totalPower').value,
-                        maxAppliancePower: document.getElementById('maxAppliancePower').value,
-                        inverterType: document.getElementById('inverterType').value,
-                        inverterPrice: document.getElementById('inverterPrice').value
-                    },
-                    wire: {
-                        current: document.getElementById('current').value,
-                        distance: document.getElementById('distance').value,
-                        voltage: document.getElementById('voltage').value,
-                        voltageDrop: document.getElementById('voltageDrop').value,
-                        wireType: document.getElementById('wireType').value
-                    }
-                };
-                
-                localStorage.setItem('solarSystemData', JSON.stringify(data));
-                updateMemoryStats();
-            }
-            
-            // Load data from localStorage
-            function loadFromLocalStorage() {
-                const savedData = localStorage.getItem('solarSystemData');
-                if (savedData) {
-                    const data = JSON.parse(savedData);
-                    
-                    // Load consumption data
-                    appliances.length = 0;
-                    data.appliances.forEach(app => {
-                        appliances.push(app);
-                    });
-                    document.getElementById('kwhCost').value = data.kwhCost;
-                    document.getElementById('solarSystem').checked = data.solarSystem;
-                    
-                    // Load panels data
-                    document.getElementById('dailyConsumptionInput').value = data.panels.dailyConsumption;
-                    document.getElementById('sunHours').value = data.panels.sunHours;
-                    document.getElementById('panelPower').value = data.panels.panelPower;
-                    document.getElementById('panelPrice').value = data.panels.panelPrice;
-                    document.getElementById('panelEfficiency').value = data.panels.efficiency;
-                    
-                    // Load batteries data
-                    document.getElementById('dailyConsumptionBattery').value = data.batteries.dailyConsumption;
-                    document.getElementById('autonomyDays').value = data.batteries.autonomyDays;
-                    document.getElementById('batteryVoltage').value = data.batteries.batteryVoltage;
-                    document.getElementById('batteryCapacity').value = data.batteries.batteryCapacity;
-                    document.getElementById('batteryType').value = data.batteries.batteryType;
-                    document.getElementById('batteryPrice').value = data.batteries.batteryPrice;
-                    
-                    // Load inverter data
-                    document.getElementById('totalPower').value = data.inverter.totalPower;
-                    document.getElementById('maxAppliancePower').value = data.inverter.maxAppliancePower;
-                    document.getElementById('inverterType').value = data.inverter.inverterType;
-                    document.getElementById('inverterPrice').value = data.inverter.inverterPrice;
-                    
-                    // Load wire data
-                    if (data.wire) {
-                        document.getElementById('current').value = data.wire.current;
-                        document.getElementById('distance').value = data.wire.distance;
-                        document.getElementById('voltage').value = data.wire.voltage;
-                        document.getElementById('voltageDrop').value = data.wire.voltageDrop;
-                        document.getElementById('wireType').value = data.wire.wireType;
-                    }
-                    
-                    // Update UI
-                    updateAppliancesList();
-                    calculateConsumption();
-                    
-                    // Recalculate panels and batteries
-                    document.getElementById('calculatePanels').click();
-                    document.getElementById('calculateBatteries').click();
-                    document.getElementById('calculateInverter').click();
-                    document.getElementById('calculateWire').click();
-                    
-                    updateMemoryStats();
-                    showNotification('تم استعادة البيانات بنجاح');
-                }
-            }
-            
-            // Save data button
-            document.getElementById('saveData').addEventListener('click', function() {
-                saveToLocalStorage();
-                showNotification('تم حفظ البيانات بنجاح! يمكنك العودة لاحقاً لاستكمال الحسابات.');
-            });
-            
-            document.getElementById('saveDataMemory').addEventListener('click', function() {
-                saveToLocalStorage();
-                showNotification('تم حفظ البيانات بنجاح!');
-            });
-            
-            // Load data button
-            document.getElementById('loadData').addEventListener('click', function() {
-                loadFromLocalStorage();
-            });
-            
-            // Clear data buttons
-            document.getElementById('clearData').addEventListener('click', function() {
-                if (confirm('هل أنت متأكد من رغبتك في مسح جميع البيانات؟')) {
-                    appliances.length = 0;
-                    updateAppliancesList();
-                    calculateConsumption();
-                    showNotification('تم مسح البيانات الحالية بنجاح!');
-                }
-            });
-            
-            document.getElementById('clearAllData').addEventListener('click', function() {
-                if (confirm('هل أنت متأكد من رغبتك في مسح جميع البيانات المحفوظة؟')) {
-                    localStorage.removeItem('solarSystemData');
-                    appliances.length = 0;
-                    
-                    // Reset form fields
-                    document.getElementById('kwhCost').value = 80;
-                    document.getElementById('solarSystem').checked = false;
-                    document.getElementById('dailyConsumptionInput').value = '';
-                    document.getElementById('sunHours').value = 6;
-                    document.getElementById('panelPower').value = 400;
-                    document.getElementById('panelPrice').value = 400;
-                    document.getElementById('panelEfficiency').value = 20;
-                    document.getElementById('dailyConsumptionBattery').value = '';
-                    document.getElementById('autonomyDays').value = 2;
-                    document.getElementById('batteryVoltage').value = 48;
-                    document.getElementById('batteryCapacity').value = 200;
-                    document.getElementById('batteryType').value = 'lead-acid';
-                    document.getElementById('batteryPrice').value = 150;
-                    document.getElementById('totalPower').value = '';
-                    document.getElementById('maxAppliancePower').value = '';
-                    document.getElementById('inverterType').value = 'modified';
-                    document.getElementById('inverterPrice').value = 2500;
-                    document.getElementById('current').value = '';
-                    document.getElementById('distance').value = '';
-                    document.getElementById('voltage').value = 48;
-                    document.getElementById('voltageDrop').value = 3;
-                    document.getElementById('wireType').value = 'copper';
-                    
-                    // Update UI
-                    updateAppliancesList();
-                    calculateConsumption();
-                    updateMemoryStats();
-                    
-                    showNotification('تم مسح جميع البيانات المحفوظة بنجاح!');
-                }
-            });
-            
-            // Save all data button
-            document.getElementById('saveAllData').addEventListener('click', function() {
-                saveToLocalStorage();
-                showNotification('تم حفظ جميع بيانات النظام بنجاح!');
-            });
-            
-            // Print summary button
-            document.getElementById('saveSummary').addEventListener('click', function() {
-                updateSystemSummary();
+            // Print summary
+            document.getElementById('printSummary').addEventListener('click', function() {
                 window.print();
             });
             
             // Initialize page
-            loadFromLocalStorage();
-            updateAppliancesList();
-            calculateConsumption();
-            updateMemoryStats();
-            
-            // Update calculations when cost changes
-            document.getElementById('kwhCost').addEventListener('input', function() {
-                calculateConsumption();
-                saveToLocalStorage();
-            });
-            
-            document.getElementById('solarSystem').addEventListener('change', function() {
-                calculateConsumption();
-                saveToLocalStorage();
-            });
+            updateSystemSummary();
         });
     </script>
 </body>
